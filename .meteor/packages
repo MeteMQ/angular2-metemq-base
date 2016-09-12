@@ -24,5 +24,5 @@ practicalmeteor:mocha
 xolvio:cleaner
 hwillson:stub-collections
 dispatch:mocha-phantomjs
-metemq:metemq
+metemq:metemq@0.4.0
 shell-server
