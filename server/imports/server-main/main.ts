@@ -23,11 +23,15 @@ export class Main {
         source.methods({
             hello() {
                 console.log('Thing says "hello"');
+
+                const thing = Things.findOne({ _id: this.thingId });
+                thing.act('print', 'print this for me...');
+
                 return 'world!';
             }
         });
     }
-    
+
     initFakeData(): void {
         if (DemoCollection.find({}).cursor.count() === 0) {
             const data: DemoDataObject[] = [{
